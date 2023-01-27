@@ -33,51 +33,41 @@ There are some sequential tasks needed to implement including:
     + Initially, complete a Dockerfile to containerize the application 
     + Second, deploy the containerized application using Docker and make a prediction 
     + Third, enhance the logging in the source code for this application 
-    + Fourth, configure Kubernetes and set up a Kubernetes cluster (minikube) 
+    + Fourth, configure Kubernetes and set up a Kubernetes cluster
     + Fifth, deploy a container using Kubernetes and make a prediction 
     + Finally, upload the entire Github repository with CircleCI to show that the code has been tested
 
 ## The steps for establishing the Environment
-- Create a virtualenv and activate it
-    ```sh
+** Firstly, just create a virtualenv and then activate this
     python3 -m venv ~/.devops
     source ~/.devops/bin/activate
-    ```
-- Run `make install` to install the necessary dependencies
 
-    ### Running `app.py`
+** Next, after above step, just run the `make install` to install the essential dependencies including:
+    # STEP 1 : Running the "app.py"
+        + Standalone:  "python app.py"
+        + Run with Docker:  "run_docker.sh"
+        + Run with Kubernetes:  "run_kubernetes.sh"
 
-    1. Standalone:  `python app.py`
-    2. Run in Docker:  `./run_docker.sh`
-    3. Run in Kubernetes:  `./run_kubernetes.sh`
-    4. Make predictions: `./make_prediction.sh`
+    # STEP 2: Docker's implementing steps including:
+        + Then, when need to publish the docker image: `./upload_docker.sh`
 
-    ### Docker
-
-    1. Publish docker image: `./upload_docker.sh`
-
-    ### Kubernetes Steps
-
-    * Setup and Configure Docker locally
-    * Setup and Configure Kubernetes locally
-    * Create Flask app in Container
-    * Run via kubectl
+    # STEP 3: Kubernetes's implementing steps including:
+        + Firstly, setup Docker on the local environment
+        + Secondly, Setup Kubernetes on the local environment
+        + Third, create Flask app in Container
+        + Then, just run via the kubectl
+        
+    And while you still have your .devops environment activated, you will still need to install:
+        + Docker
+        + Hadolint
+        + Kubernetes
 
 ### Project's Files included:
 There are some needed files to implement including:
-    + `.circleci` - circleci config scripts
-    + `model_data` - ML model related data (model, csv data)
-    + `output_txt_files` - project output files (docker, kubernetes)
-        * `docker_out.txt` - run_docker.sh output
-        * `docker_prediction_out.txt` - make_prediction.sh output while running docker
-        * `kubernetes_container_logs.txt` - kubectl logs output for the pod
-        * `kubernetes_out.txt` - run_kubernetes.sh output
-        * `kubernetes_prediction_out.txt` - make_prediction.sh output while running k8s pod
-    + `app.py` - python web application entry point file
-    + `Dickerfile` - docker image config
-    + `make_prediction.sh` - make prediction HTTP call script
-    + `Makefile` - make file (install, test, lint steps)
-    + `requirements.txt` - web application dependencies (python, libraries)
-    + `run_docker.sh` - run docker container script
-    + `run_kubernetes.sh` - run kubernetes pod for the web app script
-    + `upload_docker.sh` - upload docker image to dicker hub script
+    + .circleci 
+    + model_data with data source files
+    + output_txt_file including "docker_out.txt" and "kubernetes_out.txt"
+    + app.py, Makefile
+    + Dockerfile with related files for working with docker and other features
+    + "make_prediction.sh", "run_docker.sh", "run_kubernetes.sh", "upload_docker.sh" 
+ 
