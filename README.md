@@ -1,14 +1,8 @@
 # Project : Operationalize a Machine Learning Microservice API
 In this project, the mission is about to apply pre-trained, sklearn model that has been taught to forecast housing costs in Boston based on a number of characteristics, including information on the typical number of rooms in a home, statistics on highway accessibility, teacher-to-student ratios, and more.
 
-# Project's using tools and libraries
-    + Python, Jupiter notebook
-    + Visual Studio Code and Colab
-    + Docker, Hadolint and Kubernetes (Minikube)\
-
 ## Project's materials
-    + Initially, utilizing the dataset taken from Kaggle, on the data source site (https://www.kaggle.com/c/boston-housing).
-    + Beside that, this project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+    + In this project, utilizing the dataset taken from Kaggle : https://www.kaggle.com/c/boston-housing
 
 # Project's target
 + Firstly, implementing a Kubernetes-based elastic and fault-tolerant Machine Learning inference API.
