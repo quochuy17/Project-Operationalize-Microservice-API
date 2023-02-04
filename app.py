@@ -61,7 +61,7 @@ def predict():
     LOG.info("The inference payload DataFrame is: %s", in_load)
     # create the final input with scaling
     scale_load = scale(in_load)
-    # Collect the outputs of housing price prediction from the pretrained model, clf
+    # Collect the outputs of housing price prediction from the model
     house_predict = list(clf.predict(scale_load))
     # Write the final output of housing price prediction value
     LOG.info("The housing price prediction value is: %s", house_predict)
