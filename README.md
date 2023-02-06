@@ -51,6 +51,6 @@ There are some sequential tasks needed to implement including:
         + Kubernetes
 
 ## CircleCi badge
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/quochuy17/Project-Operationalize-Microservice-API/tree/master.svg?style=svg&circle-token=0f74f6eda723774c00c4a61a8d0f81d1fbc5820d)](https://dl.circleci.com/status-badge/redirect/gh/quochuy17/Project-Operationalize-Microservice-API/tree/master)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/quochuy17/Project-Operationalize-Microservice-API/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/quochuy17/Project-Operationalize-Microservice-API/tree/main)
 
  
