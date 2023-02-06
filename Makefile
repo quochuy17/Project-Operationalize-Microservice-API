@@ -16,6 +16,9 @@ test:
 lint:
 	# See the local hadolint install instructions:   https://github.com/hadolint/hadolint
 	# The linter for Dockerfiles
+	# Install hadolint steps:
+        # command : wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+        # commmand: chmod +x /bin/hadolint
 	hadolint Dockerfile
 
 	# The linter for Python source code linter: https://www.pylint.org/
