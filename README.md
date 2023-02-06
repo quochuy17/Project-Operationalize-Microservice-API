@@ -50,7 +50,7 @@ There are some sequential tasks needed to implement including:
         + Hadolint
         + Kubernetes
 
-## CircleCi badge
+# CircleCi badge
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/quochuy17/Project-Operationalize-Microservice-API/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/quochuy17/Project-Operationalize-Microservice-API/tree/main)
 
  
