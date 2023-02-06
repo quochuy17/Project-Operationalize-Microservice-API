@@ -1,6 +1,7 @@
 # define some essential features for implementing
-Flask
-numpy
-pandas
+Flask==1.0.2
+numpy==1.22.0
+pandas==0.24.1
 scikit-learn==0.20.3
-pylint
+pylint==2.15.10
+
