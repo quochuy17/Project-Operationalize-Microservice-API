@@ -1,22 +1,22 @@
-# Project : Operationalize a Machine Learning Microservice API
 # Python CircleCI 2.0 configuration file
+#
 # Check https://circleci.com/docs/2.0/language-python/ for more details
+#
 version: 2
 jobs:
   build:
     docker:
-      # utilize the project's Docker basis
+    # Use the same Docker base as the project
       - image: python:3.7.3-stretch
-    working_directory: ~/repo
+    # working_directory: ~/repo
     steps:
       - checkout
-      # download and then just cache the dependencies
+      # Download and cache dependencies
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "requirements.txt" }}
-            # if an exact match cannot be obtained, revert to utilizing the most recent cache
+            # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-      # install dependencies
       - run:
           name: install dependencies
           command: |
@@ -25,13 +25,12 @@ jobs:
             make install
             # Install hadolint
             wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-            chmod +x /bin/hadolint
-      # save cache
+                chmod +x /bin/hadolint
       - save_cache:
           paths:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
-      # implement the lint
+      # run lint!s
       - run:
           name: run lint
           command: |
