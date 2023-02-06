@@ -1,7 +1,5 @@
 # import some essential libraries
 import pandas as pd
-import numpy as np
-import matplotlib as mp
 import logging
 # import some other components
 from flask import Flask, jsonify, request
